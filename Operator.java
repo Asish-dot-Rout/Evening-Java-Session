@@ -36,8 +36,8 @@ public class Operator {
     int z = ++m4;//First m4 will increase by one and then the value of m4 will assign to z(pre increment)
     int z1 = m4++;//First the value of m4 will assign to z and then m4 will increase by one(post increment)
 
-    System.out.println(z);
-    System.out.println(z1);
+    System.out.println(z);//21
+    System.out.println(z1);//21
 
     //Example
     
