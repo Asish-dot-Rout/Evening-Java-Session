@@ -1,10 +1,68 @@
-/**
- * Explanation of all the java operators
+/*
+ Definition
+ -------------
+ Operators are special symbols that perform specific operations on one, two, or three operands,
+ and then return a result.
+
+ --> Based on the no of operands java operators are divided into 3 parts
+   1.Unary Operator
+   2.Binary Operator
+   3.Ternary Operator
+
  */
 public class Operator {
 
   public static void main(String[] args) {
-    /* Arithmetic Operator */
+/*Unary operator*/
+
+    /*
+     * It is of 2 types
+     * i. Increment operator --> Increase the value of a variable by 1
+     * ii.Decrement operator --> Decrease the value of a variable by 1
+     * 
+     * Increment Operator
+     * -------------------
+     * a)Pre increment(++x)
+     * b)Post increment(x++)
+     * 
+     * Decrement Operator
+     * --------------------
+     * a)Pre decrement(--x)
+     * b)Post decrement(x--)
+     * 
+     * 
+     */
+    int m4 = 20;
+    int z = ++m4;//First m4 will increase by one and then the value of m4 will assign to z(pre increment)
+    int z1 = m4++;//First the value of m4 will assign to z and then m4 will increase by one(post increment)
+
+    System.out.println(z);
+    System.out.println(z1);
+
+    //Example
+    
+    int z3 = 10;
+    z3++;
+    System.out.println(z3);//11
+    ++z3;
+    System.out.println(z3);//12
+    int m5 = z3++;
+    System.out.println(z3);//13
+    System.out.println(m5);//12
+    m5 = ++z3;
+    System.out.println(z3);//14
+    System.out.println(m5);//14
+
+    int m6 = 40;
+    System.out.println(++m6);//41
+    System.out.println(m6++);//41
+    System.out.println(++m6);//43
+    System.out.println(m6++);//43
+
+/* Binary operator */
+
+
+  /* Arithmetic Operator */
     int a = 10;
     int b = 2;
     System.out.println(a + b);// 12
@@ -45,11 +103,11 @@ public class Operator {
      * 
      * 
      * b -----> s ------> i -------> l ------> f ------> d
-     *                    ^
-     *                    |
-     *                    |
-     *             c -----
-     * 
+     *                  /
+     *                /
+     *              /
+     *            c 
+     * /
      * The size of the memory where we store decimal number is always larger than the memory where we store integer number.
      * 
      */
@@ -77,18 +135,20 @@ public class Operator {
   //d = p+d+f; CE: Bcz the expression will return string value but we can't store string in int.
    d = d+e+f;
 
-    /* Relational Operator */
+  /* Relational Operator */
 
     System.out.println(10<20); //true
     System.out.println('a' > 97.5); // false
-   //Relational operator is not applicable for non-premitive datatype
-  //System.out.println(true>false);//CE
-  //Relational operator is applicable for every primitive data type except boolean
-  //System.out.println("abc123">"abc");//CE
-  // Nesting of relational operator is not allowed
-  //System.out.println(10<20<30); //CE
+  /*
+  Relational operator is not applicable for non-premitive datatype
+  System.out.println(true>false);//CE
+  Relational operator is applicable for every primitive data type except boolean
+  System.out.println("abc123">"abc");//CE
+  Nesting of relational operator is not allowed
+  System.out.println(10<20<30); //CE
+  */
  
-    /* Bitwise Operator */
+  /* Bitwise Operator */
   /*
     a&b --> it returns true if both arguments are true.
     a|b --> it returns true if any one of the argument is true.
@@ -98,12 +158,12 @@ public class Operator {
   System.out.println(true | false);//true
   System.out.println(true^false);//true
 
+ //Bitwise operator is applicable for integer number
+
   System.out.println(4 & 5);//4
   System.out.println(4 | 5);//5
   System.out.println(4 ^ 5);//1
   
-  //Bitwise operator is applicable for integer number
-
   /* Logical Operator */
 
    /*
@@ -128,11 +188,14 @@ public class Operator {
 
   System.out.println(~4);//-5
   System.out.println(~(-4));//3
-  //System.out.println(~true);//CE
-  //This operator is applicable for integer but not for boolean
+   //This operator is applicable for integer but not for boolean
 
-  //For(1), ~ --> means ~(+1)/Add(+1) and then change the sign
-  //s0 (~4) --> (4+1) = 5 put '-' =  -5
+  //System.out.println(~true);//CE
+ 
+  /*
+  For(1), ~ --> means ~(+1)/Add(+1) and then change the sign
+  so (~4) --> (4+1) = 5 put '-' =  -5
+  */
 
   /* Boolean Complement Operator */
 
@@ -151,7 +214,7 @@ public class Operator {
   //Equality operator is applicable for every primitive data type.
   //It is also applicable for non premitive data types(object types)
   /** 
-   * DISCLAIMER:
+   * POINT TO REMEMBER(PTR):
    * Every java class is a non premitive data type.
    * Now two objects can have same reference variable
    * 
@@ -205,7 +268,7 @@ public class Operator {
      System.out.println(c3);//200
      System.out.println(d3);//10
 
- /* Ternary Operator */
+/* Ternary Operator */
   /**
    * Syntax
    * ---------
